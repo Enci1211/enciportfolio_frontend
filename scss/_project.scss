@@ -1,0 +1,16 @@
+.project {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary, 0.8)
+    ),
+    url(../img/project.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 6rem;
+  }
+}
