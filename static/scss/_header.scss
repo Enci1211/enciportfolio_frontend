@@ -55,9 +55,25 @@
       }
       font-size: 4rem;
       font-weight: 500;
-      span {
-        color: $color-secondary;
+      .hightlight {
+        color: $color-secondary-light;
       }
+    }
+
+    &_item1 {
+      animation: moveInLeft 1s ease-in;
+    }
+    &_item2 {
+      animation: moveInRight 1s 1s ease-in;
+    }
+    &_item3 {
+      animation: moveInUp 0.5s 2s ease-in;
+    }
+    &_item4 {
+      animation: moveInUp 0.5s 2.5s ease-in;
+    }
+    &_item5 {
+      animation: moveInUp 1s 3s ease-in;
     }
   }
 
