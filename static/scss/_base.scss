@@ -56,6 +56,15 @@ $bp-smallest: 28.75rem; // 400px
   @media only screen and (max-width: $bp-medium) {
     font-size: 1rem;
   }
+
+  &_highlight {
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .btn-infinite {
