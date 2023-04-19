@@ -1,4 +1,4 @@
-from flask import Flask, request,render_template,redirect,url_for,send_file
+from flask import Flask, request,render_template,redirect,url_for,send_file,make_response
 import smtplib
 from email.message import EmailMessage
 import ssl
@@ -8,7 +8,7 @@ from flask import stream_with_context
 
 app = Flask(__name__)
 
-
+# for contact form
 @app.route("/", methods=['GET','POST'])
 def home():
     if request.method == 'POST':
@@ -39,9 +39,14 @@ def home():
         return render_template("index.html",send=send)
 
 
+# for download CV button
+@app.route("/download_pdf", methods=['GET','POST'])
 def download_pdf():
     file_path = 'static/pdfs/Enci_Lyu_CV.pdf'
-    return send_file(file_path, attachment_filename='Enci_Lyu_CV.pdf', as_attachment=True)
+    response = make_response(send_file(file_path, as_attachment=True))
+    response.headers['Content-Type'] = 'application/pdf'
+    response.headers['Content-Disposition'] = 'attachment; filename=Enci_Lyu_CV.pdf'
+    return response
 
 
 

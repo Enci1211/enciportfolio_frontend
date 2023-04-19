@@ -2,7 +2,11 @@
   background-color: $color-grey-light;
   min-height: 70vh;
   padding: 6rem;
-
+  &_text {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 300;
+  }
   &_form {
     width: 60%;
     margin: 0 auto;

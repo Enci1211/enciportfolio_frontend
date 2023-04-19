@@ -10,6 +10,7 @@
   font-weight: 400;
   display: inline-block;
   margin-bottom: 6rem;
+  font-family: "Handlee", sans-serif;
 }
 @media only screen and (max-width: 75em) {
   .heading-2 {
@@ -33,6 +34,7 @@
 }
 
 .text {
+  font-family: "Handlee", sans-serif;
   font-size: 1.5rem;
   color: #377695;
 }
@@ -403,6 +405,12 @@ body {
 .project_item_img_3 {
   transform: scale(1.1);
 }
+.project_item_img_4 {
+  transform: scale(1);
+}
+.project_item_img_5 {
+  transform: translateX(-9.5rem) scale(1);
+}
 .project_item_text {
   transform: skewX(12deg);
 }
@@ -445,11 +453,24 @@ body {
   transform: scale(0.8);
   filter: blur(3px) brightness(50%);
 }
+.project_item:hover .project_item_img_4 {
+  transform: scale(1) translateX(-7rem);
+  filter: blur(3px) brightness(50%);
+}
+.project_item:hover .project_item_img_5 {
+  transform: scale(1.2) translateX(-8rem);
+  filter: blur(3px) brightness(50%);
+}
 
 .contact {
   background-color: #dad7de;
   min-height: 70vh;
   padding: 6rem;
+}
+.contact_text {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
 }
 .contact_form {
   width: 60%;
@@ -505,7 +526,7 @@ body {
   display: inline-block;
   padding: 1rem;
   border-radius: 1rem;
-  font-family: "Lato", sans-serif;
+  font-family: "Handlee", sans-serif;
   color: #e7c044;
   font-weight: 400;
   font-size: 1.5rem;
